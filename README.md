@@ -1,2 +1,8 @@
 # Questioner-UI
 Crowd-source questions for a meetup. Questioner helps the meetup organizer prioritize questions to be answered. Other users can vote on asked questions and they bubble to the top or bottom of the log.
+
+## Requirements
+
+
+## Authors
+[Abraham Kamau](https://github.com/a-braham)
