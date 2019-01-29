@@ -56,7 +56,7 @@ body {
   -webkit-border-radius: 3px;
   width: 25%;
   background: #F8FCF9;
-  background-image: url("/home/greean/AndelaProjects/Questioner/ui/img/search.png");
+  background-image: url("../img/search.png");
   background-position: 10px 10px; 
   background-repeat: no-repeat;
   padding: 8px 20px 8px 40px;
