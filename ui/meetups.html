@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <title>Questioner - Learn, share and develop as a community</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+	    <link rel="stylesheet" type="text/css" href="styles/container.css" />
+	    <link rel="stylesheet" type="text/css" href="styles/modal.css" />
+	    <link rel="icon" type="image/png" href="img/logo.png" />
+	    <script type="text/javascript" src="js/modal.js"></script>
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#" id="logo">Questioner</a>
+	        <a href="index.html" id="navbar-item">Home</a>
+	        <a href="meetups.html" id="navbar-item">Meetups</a>
+	        <a href="tags.html" id="navbar-item">Tags</a>
+	        <input id="search" type="search" placeholder="Search Question here" />
+	        <button id="signup">Abraham</button>
+		</div>
+		<div class="container">
+		  <div class="sub" id="left">
+		    <h2>Upcoming Meetups</h2>
+		    <ul class="ul-item">
+		    	<li><p>How to see if a sub value is in masked value</p></li>
+		    	<li><p>How do I get vectors out of nominal data from a database table for use in cosine similarity?</p></li>
+		    	<li><p>Mac OS X 10.9 - setting permanent environment variables</p></li>
+		    	<li><p>Why are absolute units with media queries the CSS industry standard?</p></li>
+		    </ul>
+			</div>
+  
+		  <div class="sub" id="mid">
+		    <h2>All Meetups</h2>
+		    <div class="item">
+		    	<h4 class="q-h4">How do I add a name to several columns?</h4>
+		    	<p>I'm attempting to completely recreate or reorganize the functionality of the LayersControl component in its own separate panel using react-leaflet. I have several filtered into their own and it works fine, but I'd like to customize the look and location of the Control element</p>
+		    	<div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Post Question</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label class="form-label">Title</label><br>
+                                <input class="form-input" type="text"
+                                    required><br>
+                                <label class="form-label">Description</label><br>
+                                <textarea class="textarea" 
+                                    rows="10" cols="70" name="comment" form="usrform"></textarea><br><br>
+                                <button class="form-btn">Post</button><br>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+		    	<ul>
+	                <li class="user-item">
+	                	<a id="myBtn" class="url-link form-btn" type="submit" href="#">Ask Question</a>
+	                    <p class="user">Posted
+	                        2hrs ago<a href="#" class="url-link link"> By Admin</a></p>
+	                </li>
+	            </ul>
+		    </div>
+		    <div class="item">
+		    	<h4 class="q-h4">How do I add a name to several columns?</h4>
+		    	<p>I'm attempting to completely recreate or reorganize the functionality of the LayersControl component in its own separate panel using react-leaflet. I have several filtered into their own and it works fine, but I'd like to customize the look and location of the Control element</p>
+		    	<ul>
+	                <li class="user-item">
+	                	<a id="myBtn" class="url-link form-btn" type="submit" href="#">Ask Question</a>
+	                    <p class="user">Posted
+	                        2hrs ago<a href="#" class="url-link link"> By Admin</a></p>
+	                </li>
+	            </ul>
+		    </div>
+		    <div class="item">
+		    	<h4 class="q-h4">How do I add a name to several columns?</h4>
+		    	<p>I'm attempting to completely recreate or reorganize the functionality of the LayersControl component in its own separate panel using react-leaflet. I have several filtered into their own and it works fine, but I'd like to customize the look and location of the Control element</p>
+		    	<ul>
+	                <li class="user-item">
+	                	<a id="myBtn" class="url-link form-btn" type="submit" href="#">Ask Question</a>
+	                    <p class="user">Posted
+	                        2hrs ago<a href="#" class="url-link link"> By Admin</a></p>
+	                </li>
+	            </ul>
+		    </div>
+		  </div>
+  
+		  <div class="sub" id="right">
+		    <h2>Featured Tags</h2>
+		    <ul>
+		    	<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button><button class="btn-tags">Java</button></li>
+		    	<li><button class="btn-tags">Java</button></li>
+		    	<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button><button class="btn-tags">Java</button><button class="btn-tags">Java</button></li>
+		    	<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button></li>
+		    </ul>
+		  </div>
+		</div>
+		<script>
+            var modal = document.getElementById('myModal');
+            var btn = document.getElementById("myBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+		<footer class="footer">
+            <p>&copy; 2019 Questioner Andela</p>
+        </footer>
+	</body>
+</html>
