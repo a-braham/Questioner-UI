@@ -1,29 +1,38 @@
-// const formData = document.getElementById('formData').addEventListener('submit', signUpUser);
-const signUP = document.getElementById('signUP')
-
-function signUpUser(event){
+window.onload = function () {
+    const formData = document.getElementById('formData')
+    formData.addEventListener('submit', signUpUser);
+}
+function signUpUser(event) {
     /*
     Function to perform user signup
     */
-   event.preventDefault();
+    event.preventDefault();
 
-   fetch('https://questioner-system.herokuapp.com/api/v2/signup', {
-       method: 'POST',
-       body: JSON.stringify({
-            "firstname": document.getElementById('firstname').value,
-            "lastname": document.getElementById('lastname').value,
-            "othername": document.getElementById('othername').value,
-            "email": document.getElementById('email').value,
-            "phone": document.getElementById('phone').value,
-            "username": document.getElementById('username').value,
-            "password": document.getElementById('password').value
-       }),
-       headers: {
-        'Content-Type': 'application/json'
-      }
-   })
-   .then(res => res.json())
-   .then((data => console.log('Success:', JSON.stringify(data))))
-   .catch(error => console.log('Error', error))
+    let firstname = document.getElementById('firstname').value
+    let lastname = document.getElementById('lastname').value
+    let othername = document.getElementById('othername').value
+    let email = document.getElementById('email').value
+    let phoneNumber = document.getElementById('phone').value
+    let username = document.getElementById('username').value
+    let password = document.getElementById('password').value
+
+    fetch('http://127.0.0.1:5000/api/v2/auth/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            firstname, lastname, othername, email, phoneNumber, username, password
+        })
+    })
+        .then((response) => response.json())
+        .then((data => {
+            if (data.status === 201){
+                window.location.href = "../ui/login.html";
+                console.log('Success:', JSON.stringify(data));
+            }
+            else{
+                window.alert(data.message);
+            }
+        }))
 }
-signUP.addEventListener('click', signUpUser)
