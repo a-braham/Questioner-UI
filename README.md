@@ -18,6 +18,7 @@ Crowd-source questions for a meetup. Questioner helps the meetup organizer prior
 - ``` sudo apt-get install npm ```
 - ``` npm install -s webpack ```
 - ``` npm install -s webpack-cli ```
+- Install Chrome extension ``` Allow-Control-Allow-Origin ```
 
 4. Run application
 ``` npm start ```

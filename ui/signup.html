@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles/home.css" />
     <link rel="icon" type="image/png" href="img/logo.png" />
+    <script src="../dist/bundle.signup.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -25,11 +26,15 @@
         <ul>
             <h3 class="meetup-h3"><a class="url-link meetup-url" href="#">Create account</a></h3>
         </ul>
-        <form>
-            <input class="form-input" type="text" placeholder="Username" required><br><br>
-            <input class="form-input" type="text" placeholder="Email" required><br><br>
-            <input class="form-input" type="password" placeholder="Password" required><br><br>
-            <input class="btn-form btn-margins btn-primary" value="Sign up" type="submit"><br>
+        <form id="formData">
+            <input class="form-input" type="text" placeholder="firstname" required id="firstname"><br><br>
+            <input class="form-input" type="text" placeholder="lastname" required id="lastname"><br><br>
+            <input class="form-input" type="text" placeholder="othername" required id="othername"><br><br>
+            <input class="form-input" type="text" placeholder="Username" required id="username"><br><br>
+            <input class="form-input" type="text" placeholder="Email" required id="email"><br><br>
+            <input class="form-input" type="text" placeholder="Phone" required id="phone"><br><br>
+            <input class="form-input" type="password" placeholder="Password" required id="password"><br><br>
+            <input class="btn-form btn-margins btn-primary" value="Sign up" type="submit" id="signUP"><br>
             <p class="log-footer">By clicking "Sign up", you acknowledge that you have read our terms of service,
                 privacy policy and cookie policy, and that your continued use of the website is subject to these
                 policies</p>
