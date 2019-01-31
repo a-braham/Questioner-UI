@@ -1,5 +1,7 @@
+import {login} from './helper.js'
+
 window.onload = function () {
-    const formData = document.getElementById('formData')
+    const formData = document.getElementById('formData');
     formData.addEventListener('submit', loginUser);
 }
 function loginUser(event) {
@@ -8,10 +10,10 @@ function loginUser(event) {
     */
     event.preventDefault();
 
-    let username = document.getElementById('username').value
-    let password = document.getElementById('password').value
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
 
-    fetch('http://127.0.0.1:5000/api/v2/auth/login', {
+    fetch(login, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
