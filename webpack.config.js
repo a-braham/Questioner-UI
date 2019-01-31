@@ -4,7 +4,8 @@ module.exports={
     entry:{
        index: "./ui/js/index.js",
        signup: "./ui/js/signup.js",
-       login: "./ui/js/login.js"
+       login: "./ui/js/login.js",
+       meetup: "./ui/js/create_meetup.js"
     },
     mode: 'development',
     output:{
