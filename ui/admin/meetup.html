@@ -7,8 +7,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
 	    <link rel="stylesheet" type="text/css" href="../styles/container.css" />
-		<link rel="icon" type="image/png" href="../img/logo.png" />
-		<script src="../../dist/bundle.meetup.js" type="text/javascript"></script>
+	    <link rel="icon" type="image/png" href="../img/logo.png" />
 	</head>
 	<body>
 		<div class="navbar">
@@ -33,18 +32,21 @@
 		  <div class="sub" id="mid">
 		    <div class="item">
 		    	<h4 class="q-h4">Create Meetup</h4>
-		    	<form id="formData">
+		    	<form>
                     <label class="form-label">Topic</label><br>
-                    <input class="form-input" type="text" id="topic"
+                    <input class="form-input" type="text"
                         required><br>
                     <label class="form-label">Location</label><br>
-                    <input class="form-input" type="text" id="location"
+                    <input class="form-input" type="text"
+                        required><br>
+                    <label class="form-label">Tags</label><br>
+                    <input class="form-input" type="text"
                         required><br>
                     <label class="form-label">Date</label><br>
-                    <input class="form-input" type="text" id="happeningOn" placeholder="YYYY-MM-DD" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))"
+                    <input class="form-input" type="date"
                         required><br>
                     <label class="form-label">Description</label><br>
-                    <textarea class="textarea" id="description"></textarea>
+                    <textarea class="textarea"></textarea>
                     <input class="form-btn" value="Create"
                         type="submit"><br>
                 </form>
