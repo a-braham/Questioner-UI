@@ -1,5 +1,6 @@
+import {signup} from './helper'
 window.onload = function () {
-    const formData = document.getElementById('formData')
+    const formData = document.getElementById('formData');
     formData.addEventListener('submit', signUpUser);
 }
 function signUpUser(event) {
@@ -8,15 +9,15 @@ function signUpUser(event) {
     */
     event.preventDefault();
 
-    let firstname = document.getElementById('firstname').value
-    let lastname = document.getElementById('lastname').value
-    let othername = document.getElementById('othername').value
-    let email = document.getElementById('email').value
-    let phoneNumber = document.getElementById('phone').value
-    let username = document.getElementById('username').value
-    let password = document.getElementById('password').value
+    let firstname = document.getElementById('firstname').value;
+    let lastname = document.getElementById('lastname').value;
+    let othername = document.getElementById('othername').value;
+    let email = document.getElementById('email').value;
+    let phoneNumber = document.getElementById('phone').value;
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
 
-    fetch('http://127.0.0.1:5000/api/v2/auth/signup', {
+    fetch(signup, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
