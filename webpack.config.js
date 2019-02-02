@@ -5,7 +5,8 @@ module.exports={
        index: "./ui/js/index.js",
        signup: "./ui/js/signup.js",
        login: "./ui/js/login.js",
-       meetup: "./ui/js/create_meetup.js"
+       meetup: "./ui/js/create_meetup.js",
+       meetups: "./ui/js/view_meetups.js"
     },
     mode: 'development',
     output:{
