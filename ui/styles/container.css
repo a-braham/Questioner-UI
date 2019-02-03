@@ -34,7 +34,7 @@
   border: 0.5px solid #1C680F;
 }
 .q-h4{
-  margin-left: 15%;
+  margin-left: 7%;
   color: #1C680F;
 }
 .user{
@@ -100,6 +100,10 @@
 .link{
   color: #1C680F;
   font-size: 13px;
+}
+.h-link{
+  text-decoration: none;
+  color: #1C680F;
 }
 #left{
   margin-top: 5%;
