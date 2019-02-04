@@ -6,7 +6,8 @@ module.exports={
        signup: "./ui/js/signup.js",
        login: "./ui/js/login.js",
        meetup: "./ui/js/create_meetup.js",
-       meetups: "./ui/js/view_meetups.js"
+       meetups: "./ui/js/view_meetups.js",
+       one_meet: "./ui/js/one_meetup.js"
     },
     mode: 'development',
     output:{

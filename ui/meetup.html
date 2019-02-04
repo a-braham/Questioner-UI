@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/container.css" />
 	<link rel="stylesheet" type="text/css" href="styles/modal.css" />
 	<link rel="icon" type="image/png" href="img/logo.png" />
-	<script type="text/javascript" src="js/modal.js"></script>
+	<script type="text/javascript" src="../dist/bundle.one_meet.js"></script>
 </head>
 
 <body>
@@ -25,10 +25,10 @@
 	<div class="container">
 		<div class="header">
 			<div class="left">
-				<h2>How do I add a name to several columns?</h2>
-				<h4 class="q-h4">Hosted by </h4>
-				<h4 class="q-h4">Venue:</h4>
-				<h4 class="q-h4">Date:</h4>
+				<h2 id="meetup_head"></h2>
+				<h4 class="q-h4">Hosted by <span id="user"> Admin</span></h4>
+				<h4 class="q-h4" id="venue"></h4>
+				<h4 class="q-h4" id="date"></h4>
 			</div>
 			<div class="right">
 				<ul>
@@ -45,9 +45,7 @@
 		</div>
 		<div class="body">
 			<div class="sub" id="details">
-				<p>I'm attempting to completely recreate or reorganize the functionality of the LayersControl component in its own
-					separate panel using react-leaflet. I have several filtered into their own and it works fine, but I'd like to
-					customize the look and location of the Control element</p>
+				<p id="meetup_body"></p>
 				<div id="myModal" class="modal">
 					<div class="modal-content">
 						<div class="modal-header">

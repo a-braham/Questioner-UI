@@ -8,7 +8,6 @@
   padding-right: 8%;
   padding-top: 5%;
   overflow: hidden;
-  border-bottom: 0.5px solid #CFCFCF;
 }
 .body {
   height: fit-content;
@@ -134,7 +133,6 @@
   padding: 20px;
   border-radius: 5px;
   background-color: #fff;
-  border: 0.5px solid #CFCFCF;
 }
 .right{
   float: right;
