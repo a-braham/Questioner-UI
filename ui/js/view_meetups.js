@@ -1,6 +1,6 @@
 import { meetups } from './helper.js'
 viewMeetups()
-function truncate(string, words){
+function truncate(string, words) {
     return string.split(" ").splice(0, words).join(" ");
 }
 function viewMeetups() {
@@ -21,8 +21,7 @@ function viewMeetups() {
                 data.data.forEach(meetup => {
                     meet += `<div class="item">
                                 <h4 class="q-h4"><a class="h-link" href="">${JSON.stringify(meetup[1]).toString().replace(/"/g, "")}</a></h4>
-                                <p>${truncate(JSON.stringify(meetup[2]).toString().replace(/"/g, ""), 28)} <a class="url-link" href=""> ..more</a></p>
-                                
+                                <p id="more">${truncate(JSON.stringify(meetup[2]).toString().replace(/"/g, ""), 28)} <a class="url-link" href="#" id="${JSON.stringify(meetup[0])}"> ..more</a></p>
                                 <ul>
                                     <li class="user-item">
                                         <p class="user">Posted
@@ -31,6 +30,12 @@ function viewMeetups() {
                                 </ul>
                             </div>`
                     document.getElementById('meetups').innerHTML = meet
+                    let url_id = document.getElementById(JSON.stringify(meetup[0])).id
+                    var url = "../ui/meetup.html?meet=" + encodeURIComponent(url_id)
+                    document.getElementById(JSON.stringify(meetup[0])).addEventListener("click", meetup_redirect)
+                    function meetup_redirect() {
+                        window.location.href = url
+                    }
                 });
             }
             else {
