@@ -1,3 +1,25 @@
+.header {
+  height: fit-content;
+  left: 0;
+  top: 0;
+  width: inherit;
+  background-color: #fff ;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 5%;
+  overflow: hidden;
+}
+.body {
+  height: fit-content;
+  left: 0;
+  top: 0;
+  width: inherit;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 5%;
+  overflow: hidden;
+  border-bottom: 0.5px solid #CFCFCF;
+}
 .sub {
   float: left;
   width: 20%;
@@ -34,7 +56,7 @@
   border: 0.5px solid #1C680F;
 }
 .q-h4{
-  margin-left: 15%;
+  margin-left: 7%;
   color: #1C680F;
 }
 .user{
@@ -101,6 +123,24 @@
   color: #1C680F;
   font-size: 13px;
 }
+.h-link{
+  text-decoration: none;
+  color: #1C680F;
+}
+.left{
+  width: 60%;
+  float: left;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.right{
+  float: right;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 0.5px solid #CFCFCF;
+}
 #left{
   margin-top: 5%;
   margin-left: 1%;
@@ -124,6 +164,16 @@
   margin-left: 1%;
   border-radius: 5px;
   background-color: #fff;
+  border: 0.5px solid #CFCFCF;
+}
+#details{
+  width: 50%;
+  margin-top: 1%;
+  /* margin-left: 7%; */
+  margin-bottom: 5%;
+  padding-right: 5%;
+  border-radius: 5px;
+  font-size: 18px;
   border: 0.5px solid #CFCFCF;
 }
 #myBtn{
