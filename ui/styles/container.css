@@ -191,7 +191,10 @@
 #comment-btn{
   padding: 8px;
 }
-#profile{
+#meta1{
+  color: #000000;
+}
+#meta2{
   color: #000000;
 }
 @media screen and (max-width: 992px) {
