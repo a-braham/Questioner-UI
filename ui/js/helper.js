@@ -4,6 +4,7 @@ const signup = prefix + '/auth/signup';
 const login = prefix + '/auth/login';
 const meetup = prefix + '/meetups';
 const meetups = prefix + '/meetups/upcoming';
+const prof = prefix + '/profile';
 export{
-    login, signup, meetup, meetups
+    login, signup, meetup, meetups, prof
 }
