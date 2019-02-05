@@ -29,7 +29,9 @@ function viewMeetups() {
                                     </li>
                                 </ul>
                             </div>`
-                    document.getElementById('meetups').innerHTML = meet
+                });
+                document.getElementById('meetups').innerHTML = meet
+                data.data.forEach(meetup => {
                     let url_id = document.getElementById(JSON.stringify(meetup[0])).id
                     var url = "../ui/meetup.html?meet=" + encodeURIComponent(url_id)
                     document.getElementById(JSON.stringify(meetup[0])).addEventListener("click", meetup_redirect)

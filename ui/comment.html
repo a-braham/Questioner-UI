@@ -7,7 +7,8 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
 	    <link rel="stylesheet" type="text/css" href="styles/container.css" />
-	    <link rel="icon" type="image/png" href="img/logo.png" />
+		<link rel="icon" type="image/png" href="img/logo.png" />
+		<script type="text/javascript" src="../dist/bundle.one_question.js"></script>
 	</head>
 	<body>
 		<div class="navbar">
@@ -31,8 +32,8 @@
   
 		  <div class="sub" id="mid">
 		    <div class="item">
-		    	<h4 class="q-h4">How do I add a name to several columns?</h4>
-		    	<p>I'm attempting to completely recreate or reorganize the functionality of the LayersControl component in its own separate panel using react-leaflet. I have several filtered into their own and it works fine, but I'd like to customize the look and location of the Control element.
+		    	<h4 class="q-h4" id="title"></h4>
+		    	<p id="description"></p>
 	            <ul>
                     <li class="user-item">
                         <button class="btn-votes"><img src="img/up.png"></button>
@@ -45,8 +46,7 @@
 		    </div>
 		    <h2>Comments</h2>
 		    <div class="item">
-		    	<h4 class="q-h4">How do I add a name to several columns?</h4>
-		    	<p>I'm attempting to completely recreate or reorganize the functionality of the LayersControl component in its own separate panel using react-leaflet. I have several filtered into their own and it works fine, but I'd like to customize the look and location of the Control element.
+		    	<p id="comment"></p>
 	            <ul>
                     <li class="user-item">
                         <button class="btn-votes"><img src="img/up.png"></button>

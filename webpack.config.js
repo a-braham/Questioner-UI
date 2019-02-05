@@ -10,7 +10,8 @@ module.exports={
        one_meet: "./ui/js/one_meetup.js",
        profile: "./ui/js/profile.js",
        question: "./ui/js/create_question.js",
-       questions: "./ui/js/view_questions.js"
+       questions: "./ui/js/view_questions.js",
+       one_question: "./ui/js/one_question.js"
     },
     mode: 'development',
     output:{
