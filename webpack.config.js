@@ -8,7 +8,9 @@ module.exports={
        meetup: "./ui/js/create_meetup.js",
        meetups: "./ui/js/view_meetups.js",
        one_meet: "./ui/js/one_meetup.js",
-       profile: "./ui/js/profile.js"
+       profile: "./ui/js/profile.js",
+       question: "./ui/js/create_question.js",
+       questions: "./ui/js/view_questions.js"
     },
     mode: 'development',
     output:{
