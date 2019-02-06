@@ -67,3 +67,46 @@ function upvote() {
             }
         }))
 }
+
+window.onload = function () {
+    const formData = document.getElementById('formData');
+    formData.addEventListener('submit', create_comment);
+}
+function create_comment(event) {
+    /*
+    Function to create comment based on particular Question
+    */
+
+   event.preventDefault();
+
+    var page_URL = document.URL;
+    var split_url = page_URL.split('/')
+    var last_part = split_url[split_url.length - 1]
+    var split_last = last_part.split('=')
+    var qid = split_last[split_last.length - 1]
+
+    const prefix = 'http://127.0.0.1:5000/api/v2';
+    const url = prefix + '/questions/' + qid + '/comment/';
+
+    let comment = document.getElementById('com').value;
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': localStorage.getItem('token')
+        },
+        body: JSON.stringify({
+            comment
+        })
+    })
+        .then((response) => response.json())
+        .then((data => {
+            if (data.status === 201) {
+                window.location = window.location
+            }
+            else {
+                window.alert(data.message);
+            }
+        }))
+}
