@@ -1,18 +1,18 @@
 import { questions } from './helper.js'
-viewMeetups()
+viewQuestions()
 function truncate(string, words) {
     return string.split(" ").splice(0, words).join(" ");
 }
-function viewMeetups() {
+function viewQuestions() {
     /*
-    Function to collect meetups
+    Function to collect questions specific to a meetup
     */
 
     var page_URL = document.URL;
     var split_url = page_URL.split('/')
     var last_part = split_url[split_url.length - 1]
     var split_last = last_part.split('=')
-    var mid = split_last[split_last.length-1]
+    var mid = split_last[split_last.length - 1]
 
     const prefix = 'http://127.0.0.1:5000/api/v2';
     const url = prefix + '/meetup/' + mid + '/questions/';
@@ -42,11 +42,13 @@ function viewMeetups() {
                                     </li>
                                 </ul>
                             </div>`
-                    document.getElementById('questions').innerHTML = question
+                });
+                document.getElementById('questions').innerHTML = question
+                data.data.forEach(questions => {
                     let url_id = document.getElementById(JSON.stringify(questions[0])).id
-                    var url = "../ui/meetup.html?meet=" + encodeURIComponent(url_id)
-                    document.getElementById(JSON.stringify(questions[0])).addEventListener("click", meetup_redirect)
-                    function meetup_redirect() {
+                    var url = "../ui/comment.html?question=" + encodeURIComponent(url_id)
+                    document.getElementById(JSON.stringify(questions[0])).addEventListener("click", question_redirect)
+                    function question_redirect() {
                         window.location.href = url
                     }
                 });
