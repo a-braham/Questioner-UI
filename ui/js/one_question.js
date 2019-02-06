@@ -143,3 +143,55 @@ function create_comment(event) {
             }
         }))
 }
+
+viewComments()
+function viewComments() {
+    /*
+    Function to collect questions specific to a meetup
+    */
+
+    var page_URL = document.URL;
+    var split_url = page_URL.split('/')
+    var last_part = split_url[split_url.length - 1]
+    var split_last = last_part.split('=')
+    var mid = split_last[split_last.length - 1]
+
+    const prefix = 'http://127.0.0.1:5000/api/v2';
+    const url = prefix + '/questions/' + mid + '/comments/';
+
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then((response) => response.json())
+        .then((data => {
+            if (data.status === 200) {
+                let comment_ = new String();
+                data.data.forEach(comments => {
+                    comment_ += `<div class="item">
+                                <p id="comment">${JSON.stringify(comments[3]).toString().replace(/"/g, "")}</p>
+                                <ul>
+                                    <li class="user-item">
+                                        <p class="user">Commented
+                                            2hrs ago<a href="#" class="url-link"> By Grean</a></p>
+                                    </li>
+                                </ul>
+                            </div>`
+                });
+                document.getElementById('allcomments').innerHTML = comment_
+                // data.data.forEach(comments => {
+                //     let url_id = document.getElementById(JSON.stringify(comments[0])).id
+                //     var url = "../ui/comment.html?question=" + encodeURIComponent(url_id)
+                //     document.getElementById(JSON.stringify(questions[0])).addEventListener("click", question_redirect)
+                //     function question_redirect() {
+                //         window.location.href = url
+                //     }
+                // });
+            }
+            else {
+                window.alert(data.message);
+            }
+        }))
+}
