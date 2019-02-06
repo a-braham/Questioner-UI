@@ -46,7 +46,7 @@ function viewQuestions() {
                 document.getElementById('questions').innerHTML = question
                 data.data.forEach(questions => {
                     let url_id = document.getElementById(JSON.stringify(questions[0])).id
-                    var url = "../ui/comment.html?meet=" + encodeURIComponent(url_id)
+                    var url = "../ui/comment.html?question=" + encodeURIComponent(url_id)
                     document.getElementById(JSON.stringify(questions[0])).addEventListener("click", question_redirect)
                     function question_redirect() {
                         window.location.href = url
