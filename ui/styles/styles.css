@@ -73,6 +73,14 @@ body {
   margin-left: 20%;
 }
 
+.rsvp{
+  background-color: #1C680F;
+  border: none;
+  -webkit-border-radius: 3px;
+  color: #fff;
+  padding: 8px;
+}
+
 @media screen and (max-width: 600px) {
   .navbar{
     overflow: absolute;
