@@ -197,6 +197,11 @@
 #meta2{
   color: #000000;
 }
+#count{
+  font-style: normal;
+  font-size: 20px;
+  color: #1C680F;
+}
 @media screen and (max-width: 992px) {
   #left{
     width: 50%;

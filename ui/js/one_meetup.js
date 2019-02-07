@@ -66,6 +66,7 @@ function yesRsvp(event) {
         .then((response) => response.json())
         .then((data => {
             if (data.status === 201) {
+                window.alert(data.message);
                 window.location = window.location
             }
             else {
@@ -149,3 +150,37 @@ function noRsvp(event) {
             }
         }))
 }
+
+countRsvp()
+function countRsvp() {
+    /*
+    Function to SHOW no. OF rsvpS
+    */
+
+   var page_URL = document.URL;
+   var split_url = page_URL.split('/')
+   var last_part = split_url[split_url.length-1]
+   var split_last = last_part.split('=')
+
+   var mid = split_last[split_last.length-1]
+
+   const prefix = 'http://127.0.0.1:5000/api/v2';
+   const url = prefix + '/meetups/' + mid + '/rsvps_count/';
+
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then((response) => response.json())
+        .then((data => {
+            if (data.status === 200) {
+                document.getElementById('count').innerHTML = data.data;
+            }
+            else {
+                window.alert(data.message);
+            }
+        }))
+}
+
