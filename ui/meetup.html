@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Questioner - Learn, share and develop as a community</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+	<link rel="stylesheet" type="text/css" href="styles/container.css" />
+	<link rel="stylesheet" type="text/css" href="styles/modal.css" />
+	<link rel="icon" type="image/png" href="img/logo.png" />
+	<script type="text/javascript" src="../dist/bundle.one_meet.js"></script>
+	<script type="text/javascript" src="../dist/bundle.question.js"></script>
+</head>
+
+<body>
+	<div class="navbar">
+		<a href="#" id="logo">Questioner</a>
+		<a href="index.html" id="navbar-item">Home</a>
+		<a href="meetups.html" id="navbar-item">Meetups</a>
+		<a href="tags.html" id="navbar-item">Tags</a>
+		<input id="search" type="search" placeholder="Search Question here" />
+		<button id="signup">Abraham</button>
+	</div>
+	<div class="container">
+		<div class="header">
+			<div class="left">
+				<h2 id="meetup_head"></h2>
+				<h4 class="q-h4">Hosted by <span id="user"> Admin</span></h4>
+				<h4 class="q-h4" id="venue"></h4>
+				<h4 class="q-h4" id="date"></h4>
+			</div>
+			<div class="right">
+				<ul>
+					<li>
+						<p>Are you attending? <span id="count"></span> going!</p>
+					</li>
+					<li>
+						<button class="rsvp" id="yes">Yes</button>
+						<button class="rsvp" id="maybe">Maybe</button>
+						<button class="rsvp" id="no">No</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="body">
+			<div class="sub" id="details">
+				<p id="meetup_body"></p>
+				<div id="myModal" class="modal">
+					<div class="modal-content">
+						<div class="modal-header">
+							<span class="close">&times;</span>
+							<h2>Post Question</h2>
+						</div>
+						<div class="modal-body">
+							<form id="formData">
+								<label class="form-label">Title</label><br>
+								<input class="form-input" type="text" id="title" required><br>
+								<label class="form-label">Description</label><br>
+								<textarea class="textarea" id="description" rows="10" cols="70" name="comment" form="usrform"></textarea><br><br>
+								<button class="form-btn">Post</button><br>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<ul>
+					<li class="user-item">
+						<a id="myBtn" class="url-link form-btn" type="submit">Ask Question</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="right">
+				<h2>Featured Tags</h2>
+				<ul>
+					<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button><button class="btn-tags">Java</button></li>
+					<li><button class="btn-tags">Java</button></li>
+					<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button><button class="btn-tags">Java</button><button
+						 class="btn-tags">Java</button></li>
+					<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script>
+		var modal = document.getElementById('myModal');
+		var btn = document.getElementById("myBtn");
+		var span = document.getElementsByClassName("close")[0];
+		btn.onclick = function () {
+			modal.style.display = "block";
+		}
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<footer class="footer">
+		<p>&copy; 2019 Questioner Andela</p>
+	</footer>
+</body>
+
+</html>
