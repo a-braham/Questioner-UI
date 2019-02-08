@@ -14,7 +14,7 @@ function viewQuestions() {
     var split_last = last_part.split('=')
     var mid = split_last[split_last.length - 1]
 
-    const prefix = 'http://127.0.0.1:5000/api/v2';
+    const prefix = 'https://questioner-system.herokuapp.com/api/v2';
     const url = prefix + '/meetup/' + mid + '/questions/';
 
     fetch(url, {
