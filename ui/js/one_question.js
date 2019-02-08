@@ -13,7 +13,7 @@ function viewQuestion() {
     var split_last = last_part.split('=')
     var qid = split_last[split_last.length - 1]
 
-    const prefix = 'http://127.0.0.1:5000/api/v2';
+    const prefix = 'https://questioner-system.herokuapp.com/api/v2';
     const url = prefix + '/questions/' + qid;
 
     fetch(url, {
@@ -48,7 +48,7 @@ function upvote() {
     var split_last = last_part.split('=')
     var qid = split_last[split_last.length - 1]
 
-    const prefix = 'http://127.0.0.1:5000/api/v2';
+    const prefix = 'https://questioner-system.herokuapp.com/api/v2';
     const url = prefix + '/questions/' + qid + '/upvote/';
 
     fetch(url, {
@@ -118,7 +118,7 @@ function create_comment(event) {
     var split_last = last_part.split('=')
     var qid = split_last[split_last.length - 1]
 
-    const prefix = 'http://127.0.0.1:5000/api/v2';
+    const prefix = 'https://questioner-system.herokuapp.com/api/v2';
     const url = prefix + '/questions/' + qid + '/comment/';
 
     let comment = document.getElementById('com').value;
@@ -156,7 +156,7 @@ function viewComments() {
     var split_last = last_part.split('=')
     var mid = split_last[split_last.length - 1]
 
-    const prefix = 'http://127.0.0.1:5000/api/v2';
+    const prefix = 'https://questioner-system.herokuapp.com/api/v2';
     const url = prefix + '/questions/' + mid + '/comments/';
 
     fetch(url, {
