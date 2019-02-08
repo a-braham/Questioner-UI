@@ -46,7 +46,7 @@ function viewMeetups() {
 
                         let mid = JSON.stringify(meetup[0])
 
-                        const prefix = 'http://127.0.0.1:5000/api/v2';
+                        const prefix = 'https://questioner-system.herokuapp.com/api/v2';
                         const url = prefix + '/meetups/' + mid + '/delete/';
 
                         fetch(url, {

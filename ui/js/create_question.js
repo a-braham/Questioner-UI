@@ -17,7 +17,7 @@ function create_question(event) {
     let title = document.getElementById('title').value;
     let body = document.getElementById('description').value;
 
-    const prefix = 'http://127.0.0.1:5000/api/v2';
+    const prefix = 'https://questioner-system.herokuapp.com/api/v2';
     const url = prefix + '/meetup/' + mid + '/question/';
     console.log(url)
     fetch(url, {
