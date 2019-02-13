@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .header {
   height: fit-content;
   left: 0;
@@ -141,6 +144,50 @@
   background-color: #fff;
   border: 0.5px solid #CFCFCF;
 }
+.column{
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+.row {
+  margin: 5% 2%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #7F8A7D;
+  color: white;
+  margin-bottom: 10px;
+}
+.card:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2);
+}
+.btn{
+  padding: 8px;
+  border: none;
+  -webkit-border-radius: 3px;
+  color: #fff;
+}
+.edit{
+  background-color: #2A9C10;
+}
+.delete{
+  background-color: #E32020;
+}
+
 #left{
   margin-top: 5%;
   margin-left: 1%;
