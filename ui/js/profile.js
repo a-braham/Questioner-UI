@@ -15,10 +15,10 @@ function profilename() {
         .then((response) => response.json())
         .then((data => {
             if (data.status === 200) {
-               document.getElementById('signup').innerHTML = data.data[4].toString().replace(/"/g, "")
+               document.getElementById('user').innerHTML = data.data[4].toString().replace(/"/g, "")
             }
             else {
-                window.alert(data.message);
+                window.location = "../admin/login.html";
             }
         }))
 }

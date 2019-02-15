@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+body{
+  height: 100%;
+  position: relative;
+}
 .header {
   height: fit-content;
   left: 0;
@@ -61,21 +65,6 @@
 .q-h4{
   margin-left: 7%;
   color: #1C680F;
-}
-.user{
-  float: right;
-  font-size: 13px;
-}
-.user{
-  margin-right:6%; 
-  font-size: 80%; 
-  font-family: serif; color: #ABABAB; float: right;
-}
-.user-item{
-  color: #fff
-}
-.user{
-  text-decoration: none;
 }
 .form-label{
   display: inline-block;
@@ -186,6 +175,68 @@
 }
 .delete{
   background-color: #E32020;
+}
+.groups{
+  padding-right: 8%;
+}
+.ul-controls{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.li-controls-headers{
+  float: left;
+}
+.li-controls-headers a{
+  text-decoration: none;
+  color: #0B2E05;
+}
+.li-controls-headers a:hover{
+  text-decoration: underline;
+}
+.li-controls-buttons{
+  margin-top: 2%;
+  margin-right: 3%;
+  float: right;
+} 
+.add{
+  width: max-content;
+  border: none;
+  -webkit-border-radius: 3px;
+  color: #fff;
+  padding: 8px;
+  background-color: #fff;
+  color: #1C680F;
+}
+.add:hover{
+  color: #31B31A;
+}
+.change{
+  width: max-content;
+  border: none;
+  -webkit-border-radius: 3px;
+  color: #fff;
+  padding: 8px;
+  margin-left: 20%;
+  background-color: #fff;
+  color: #1C680F;
+}
+.change:hover{
+  color: #31B31A;
+}
+.actions{
+  background-color: #EEFEEB;
+  width: 25%;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: 63%;
+}
+.action-header{
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #left{
