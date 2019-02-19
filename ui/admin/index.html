@@ -22,7 +22,7 @@
 			<li class="nav-li"><a class="li-item" href="">CHANGE PASSWORD / </a></li>
 			<li class="nav-li"><a class="li-item" href="../index.html">VIEW SITE / </a></li>
 			<li class="nav-li"><a class="li-item" href="" id="user"></a></li>
-		</ul>	
+		</ul>
 	</div>
 	<div class="content">
 		<div class="users">
@@ -33,16 +33,22 @@
 		<div class="groups">
 			<div class="group">
 				<ul class="ul-controls">
-					<li class="li-controls-headers"><a href=""><h5>Groups</h5></li></a></li>
+					<li class="li-controls-headers"><a href="">
+							<h5>Groups</h5>
+					</li></a></li>
 					<li class="li-controls-buttons"><button class="add"><img src="../img/add.png"> Add</button></li>
-					<li class="li-controls-buttons"><button class="change"><img src="../img/change.png"> Change</button></li>
+					<li class="li-controls-buttons"><button class="change"><img src="../img/change.png"> Change</button>
+					</li>
 				</ul>
 			</div>
 			<div class="usrs">
 				<ul class="ul-controls">
-					<li class="li-controls-headers"><a href=""><h5>Users</h5></a></li>
+					<li class="li-controls-headers"><a href="">
+							<h5>Users</h5>
+						</a></li>
 					<li class="li-controls-buttons"><button class="add"><img src="../img/add.png"> Add</button></li>
-					<li class="li-controls-buttons"><button class="change"><img src="../img/change.png"> Change</button></li>
+					<li class="li-controls-buttons"><button class="change"><img src="../img/change.png"> Change</button>
+					</li>
 				</ul>
 			</div>
 		</div><br>
@@ -54,17 +60,46 @@
 		<div class="groups">
 			<div class="meetups">
 				<ul class="ul-controls">
-					<li class="li-controls-headers"><a href=""><h5>Meetups</h5></a></li>
+					<li class="li-controls-headers"><a href="./meetups.html">
+							<h5>Meetups</h5>
+						</a></li>
 					<li class="li-controls-buttons"><button class="add"><img src="../img/add.png"> Add</button></li>
-					<li class="li-controls-buttons"><button class="change"><img src="../img/change.png"> Change</button></li>
+					<li class="li-controls-buttons"><button class="change"><img src="../img/change.png"> Change</button>
+					</li>
 				</ul>
 			</div>
 			<div class="questions">
 				<ul class="ul-controls">
-					<li class="li-controls-headers"><a href=""><h5>Questions</h5></a></li>
+					<li class="li-controls-headers"><a href="./questions.html">
+							<h5>Questions</h5>
+						</a></li>
 					<li class="li-controls-buttons"><button class="add"><img src="../img/add.png"> Add</button></li>
-					<li class="li-controls-buttons"><button class="change"><img src="../img/change.png"> Change</button></li>
+					<li class="li-controls-buttons"><button class="change"><img src="../img/change.png"> Change</button>
+					</li>
 				</ul>
+			</div>
+		</div>
+		<div>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<div class="modal-header">
+						<span class="close">&times;</span>
+						<h2>Post Question</h2>
+					</div>
+					<div class="modal-body">
+						<form id="formData">
+							<label class="form-label">Title</label><br>
+							<input class="form-input" type="text" id="title" required><br>
+							<label class="form-label">Description</label><br>
+							<textarea class="textarea" id="description" rows="10" cols="70" name="comment"
+								form="usrform"></textarea><br><br>
+							<button class="form-btn">Post</button><br>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<p></p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="row" id="meetups"></div>
@@ -72,7 +107,8 @@
 	<div class="actions">
 		<div class="action-header">
 			<h4>Recent Actions</h4>
-		</div><hr>
+		</div>
+		<hr>
 		<div class="action-body">
 			<ul>
 				<li><a href="">Test item</a></li>

@@ -66,12 +66,19 @@ body{
   margin-left: 7%;
   color: #1C680F;
 }
+.form-container{
+  margin: auto;
+  margin-top: 10%;
+  position: relative;
+  width: 50%;
+  background-color: #fff;
+}
 .form-label{
   display: inline-block;
   padding: 5px 2px;
   margin-left: 5%;
   margin-top: 5px;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   font-family: sans-serif;
   font-size: small;
   font-weight: bold;
@@ -225,6 +232,32 @@ body{
 .change:hover{
   color: #31B31A;
 }
+.li-meetup-buttons{
+  margin-top: 2%;
+  margin-right: 3%;
+  float: left;
+}
+.edt{
+  width: max-content;
+  border: none;
+  -webkit-border-radius: 3px;
+  color: #1C680F;
+  padding: 8px;
+}
+.edt:hover{
+  color: #31B31A;
+}
+.del{
+  width: max-content;
+  border: none;
+  -webkit-border-radius: 3px;
+  padding: 8px;
+  margin-left: 5%;
+  color: #1C680F;
+}
+.del:hover{
+  color: #31B31A;
+}
 .actions{
   background-color: #EEFEEB;
   width: 25%;
@@ -234,9 +267,45 @@ body{
   bottom: 0;
   margin-left: 63%;
 }
+.meetup-action{
+  margin-left: 66%;
+  top: 5%;
+}
 .action-header{
   margin-left: 10%;
   margin-right: 10%;
+}
+.new{
+  float: right;
+  margin: 5%;
+  margin-top: 0;
+  margin-bottom: 1%;
+  width: max-content;
+  border: none;
+  -webkit-border-radius: 3px;
+  padding: 8px;
+  color: #1C680F;
+}
+.new:hover{
+  background-color: #5A9B4F;
+  color: #fff;
+}
+.table{
+  border-collapse: collapse;
+  width: 90%;
+}
+.thead{
+  background-color: #5A9B4F;
+  color: white;
+  text-align: left;
+  padding: 8px;
+}
+.tbody{
+  text-align: left;
+  padding: 8px;
+}
+.trow:nth-child(even){
+  background-color: #f2f2f2
 }
 
 #left{
