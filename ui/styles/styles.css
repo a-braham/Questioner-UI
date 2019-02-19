@@ -1,6 +1,6 @@
 body {
   overflow-y: auto;
-  background-color: #EEF9F1;
+  background-color: #fff;
 }
 
 .navbar {
@@ -17,21 +17,41 @@ body {
   overflow: hidden;
   border-bottom: 0.5px solid #CFCFCF;
 }
-
-.navbar a {
-  color: #1C680F;
-  text-align: center;
-  padding: 4px 12px;
+.admin-navbar{
+  padding-left: 5%;
+  padding-right: 5%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: #1C680F;
+  padding-bottom: .5%;
+  padding-top: 0.5%;
+}
+.nav-ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.nav-li{
+  float: right;
+}
+.nav-li a{
   text-decoration: none;
-  font-size: 15px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: 500;
+  color: #CED3CD;
 }
-
-.navbar a:hover {
-  color: #24A60E;
+.logo{
+  float: left;
+  font-size: 25px;
+  font-family: serif;
+  font-weight: bolder;
 }
-
+.li-item{
+  text-decoration: #fff;
+  font-size: 12px;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
 .footer{
   z-index: 10000;
   position: fixed;
@@ -44,12 +64,40 @@ body {
   color: #1C680F;
   text-align: center;
 }
-
-#logo{
-  font-size: 25px;
-  font-family: serif;
-  font-weight: bolder;
-  color: #1C680F;
+.content{
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 60%;
+  padding: 1px;
+}
+.users{
+  background-color: #5A9B4F;
+  width: 90%;
+  vertical-align: middle;
+  padding: 1px;
+  padding-left: 2%;
+}
+.users a{
+  text-decoration: none;
+  color: #E4EFE2;
+}
+.users a:hover{
+  text-decoration: underline;
+}
+.meet_questions{
+  background-color: #5A9B4F;
+  width: 90%;
+  vertical-align: middle;
+  padding: 1px;
+  padding-left: 2%;
+  margin-top: 1%;
+}
+.meet_questions a{
+  text-decoration: none;
+  color: #E4EFE2;
+}
+.meet_questions a:hover{
+  text-decoration: underline;
 }
 #search{
   font-size: 14px;

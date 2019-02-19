@@ -26,7 +26,7 @@ function loginUser(event) {
         .then((data => {
             if (data.status === 200){
                 localStorage.setItem('token', data.token)
-                window.location.href = "../admin/home.html";
+                window.location.href = "../admin/index.html";
             }
             else{
                 window.alert(data.message);
