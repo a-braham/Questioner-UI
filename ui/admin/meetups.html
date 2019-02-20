@@ -25,30 +25,49 @@
         </ul>
     </div>
     <div class="content">
-        <button class="new"><img src="../img/add.png">
+        <button class="new" id="myBtn"><img src="../img/add.png">
             Create meetup</button>
         <form>
             <input id="search" type="search" placeholder="Search Meetup" />
         </form>
         <table class="table">
-            <tr class="trow">
-                <th class="thead">Id</th>
-                <th class="thead">Meetups</th>
-                <th class="thead">Actions</th>
-            </tr>
-            <tr class="trow">
-                <td class="tbody">1</td>
-                <td class="tbody">The format for a change command is: operator [number] motion</td>
-                <td class="tbody">
-                    <ul class="ul-controls">
-                        </li>
-                        <li class="li-meetup-buttons"><button class="edt"><img src="../img/edit.png"> Edit</button>
-                        <li class="li-meetup-buttons"><button class="del"><img src="../img/delete.png"> Delete</button>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+            <thead>
+                <tr class="trow">
+                    <th class="thead">Id</th>
+                    <th class="thead">Meetups</th>
+                    <th class="thead">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
         </table>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h4>Create Meetup</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="formData">
+                        <label class="form-label">Topic</label><br>
+                        <input class="form-input" type="text" id="topic" required><br>
+                        <label class="form-label">Location</label><br>
+                        <input class="form-input" type="text" id="location" required><br>
+                        <label class="form-label">Date</label><br>
+                        <input class="form-input" type="text" id="happeningOn" placeholder="YYYY-MM-DD"
+                            pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))"
+                            required><br>
+                        <label class="form-label">Description</label><br>
+                        <textarea class="textarea" id="description"></textarea>
+                        <input class="form-btn" value="Create" type="submit"><br>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p></p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row" id="meetups"></div>
     <div class="actions meetup-action">
@@ -62,6 +81,22 @@
             </ul>
         </div>
     </div>
+    <script>
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
     <footer class="footer">
         <p>&copy; 2019 Questioner Andela</p>
     </footer>
