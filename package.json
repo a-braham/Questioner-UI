@@ -31,6 +31,9 @@
   "keywords": [
     "js"
   ],
+  "jest":{
+    "collectCoverage": true
+  },
   "author": "Abraham Kamau",
   "license": "ISC",
   "bugs": {
