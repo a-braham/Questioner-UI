@@ -1,74 +1,91 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	    <meta charset="utf-8" />
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <title>Questioner - Learn, share and develop as a community</title>
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-	    <link rel="stylesheet" type="text/css" href="styles/container.css" />
-		<link rel="icon" type="image/png" href="img/logo.png" />
-		<script type="text/javascript" src="../dist/bundle.one_question.js"></script>
-	</head>
-	<body>
-		<div class="navbar">
-			<a href="#" id="logo">Questioner</a>
-	        <a href="index.html" id="navbar-item">Home</a>
-	        <a href="meetups.html" id="navbar-item">Meetups</a>
-	        <a href="tags.html" id="navbar-item">Tags</a>
-	        <input id="search" type="search" placeholder="Search Question here" />
-	        <button id="signup">Abraham</button>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Questioner - Learn, share and develop as a community</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+	<link rel="stylesheet" type="text/css" href="styles/container.css" />
+	<link rel="icon" type="image/png" href="img/logo.png" />
+	<script type="text/javascript" src="../dist/bundle.one_question.js"></script>
+</head>
+
+<body>
+	<div class="navbar normal">
+		<ul class="nav-ul">
+			<li class="nav-li logo"><a href="./index.html">Questioner</a></li>
+			<li class="nav-li nav-li-item"><a href="index.html" id="navbar-item">Home</a></li>
+			<li class="nav-li nav-li-item"><a href="meetups.html" id="navbar-item">Meetups</a></li>
+			<li class="nav-li nav-li-item"><a href="tags.html" id="navbar-item">Tags</a></li>
+			<li class="nav-li"><a class="li-item" href="">LOG OUT</a></li>
+			<li class="nav-li"><a class="li-item" href="" id="user"></a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="sub" id="left">
+			<h2>Upcoming Meetups</h2>
+			<ul class="ul-item">
+				<li>
+					<p>How to see if a sub value is in masked value</p>
+				</li>
+				<li>
+					<p>How do I get vectors out of nominal data from a database table for use in cosine similarity?</p>
+				</li>
+				<li>
+					<p>Mac OS X 10.9 - setting permanent environment variables</p>
+				</li>
+				<li>
+					<p>Why are absolute units with media queries the CSS industry standard?</p>
+				</li>
+			</ul>
 		</div>
-		<div class="container">
-		  <div class="sub" id="left">
-		    <h2>Upcoming Meetups</h2>
-		    <ul class="ul-item">
-		    	<li><p>How to see if a sub value is in masked value</p></li>
-		    	<li><p>How do I get vectors out of nominal data from a database table for use in cosine similarity?</p></li>
-		    	<li><p>Mac OS X 10.9 - setting permanent environment variables</p></li>
-		    	<li><p>Why are absolute units with media queries the CSS industry standard?</p></li>
-		    </ul>
+
+		<div class="sub" id="mid">
+			<div class="item">
+				<h4 class="q-h4" id="title"></h4>
+				<p id="description"></p>
+				<ul>
+					<li class="user-item">
+						<button class="btn-votes" id="upvote"><img src="img/up.png"></button>
+						<button class="btn-votes" id="votes">
+							<p>0</p>
+						</button>
+						<button class="btn-votes" id="downvote"><img src="img/down.png"></button>
+						<p class="user">Asked
+							2hrs ago<a href="#" class="url-link"> By Abraham</a></p>
+					</li>
+				</ul>
 			</div>
-  
-		  <div class="sub" id="mid">
-		    <div class="item">
-		    	<h4 class="q-h4" id="title"></h4>
-		    	<p id="description"></p>
-	            <ul>
-                    <li class="user-item">
-                        <button class="btn-votes" id="upvote"><img src="img/up.png"></button>
-                        <button class="btn-votes" id="votes"><p>0</p></button>
-                        <button class="btn-votes" id="downvote"><img src="img/down.png"></button>
-                        <p class="user">Asked
-	                        2hrs ago<a href="#" class="url-link"> By Abraham</a></p>
-                    </li>
-                </ul>
-		    </div>
-		    <h2>Comments</h2>
-		    <div id="allcomments"></div>
-		    <div class="item">
-		    	<form id="formData">
-		    		<h2>Your Comment</h2>
-		    		<textarea class="textarea" id="com"></textarea>
-		    		<input class="form-btn" value="Comment" type="submit" id="comment_btn"><br>
-		    	</form>
-		    </div>
-		  </div>
-
-
-  
-		  <div class="sub" id="right">
-		    <h2>Featured Tags</h2>
-		    <ul>
-		    	<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button><button class="btn-tags">Java</button></li>
-		    	<li><button class="btn-tags">Java</button></li>
-		    	<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button><button class="btn-tags">Java</button><button class="btn-tags">Java</button></li>
-		    	<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button></li>
-		    </ul>
-		  </div>
+			<h2>Comments</h2>
+			<div id="allcomments"></div>
+			<div class="item">
+				<form id="formData">
+					<h2>Your Comment</h2>
+					<textarea class="textarea" id="com"></textarea>
+					<input class="form-btn" value="Comment" type="submit" id="comment_btn"><br>
+				</form>
+			</div>
 		</div>
-		<footer class="footer">
-            <p>&copy; 2019 Questioner Andela</p>
-        </footer>
-	</body>
+
+
+
+		<div class="sub" id="right">
+			<h2>Featured Tags</h2>
+			<ul>
+				<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button><button
+						class="btn-tags">Java</button></li>
+				<li><button class="btn-tags">Java</button></li>
+				<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button><button
+						class="btn-tags">Java</button><button class="btn-tags">Java</button></li>
+				<li><button class="btn-tags">Java</button><button class="btn-tags">Java</button></li>
+			</ul>
+		</div>
+	</div>
+	<footer class="footer">
+		<p>&copy; 2019 Questioner Andela</p>
+	</footer>
+</body>
+
 </html>

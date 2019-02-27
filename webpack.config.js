@@ -1,7 +1,9 @@
 const path=require('path')
+// require("babel-polyfill");
 
 module.exports={
     entry:{
+    //    "babel-polyfill": "./ui/js",
        index: "./ui/js/index.js",
        signup: "./ui/js/signup.js",
        login: "./ui/js/login.js",
