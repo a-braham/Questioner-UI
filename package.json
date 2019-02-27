@@ -1,0 +1,40 @@
+{
+  "name": "questioner-ux",
+  "version": "1.0.0",
+  "description": "Crowd-source questions for a meetup. Questioner helps the meetup organizer prioritize questions to be answered. Other users can vote on asked questions and they bubble to the top or bottom of the log.",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.3.4",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.1.0",
+    "babel-plugin-syntax-class-properties": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.3",
+    "faker": "^4.1.0",
+    "jest": "^24.1.0",
+    "puppeteer": "^1.12.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "webpack --config webpack.config.js",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-braham/Questioner-UX.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Abraham Kamau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-braham/Questioner-UX/issues"
+  },
+  "homepage": "https://github.com/a-braham/Questioner-UX#readme"
+}
