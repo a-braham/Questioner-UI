@@ -17,12 +17,14 @@
     "coveralls": "^3.0.3",
     "faker": "^4.1.0",
     "jest": "^24.1.0",
-    "puppeteer": "^1.12.2"
+    "puppeteer": "^1.12.2",
+    "yarn": "^1.13.0"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --colors",
     "start": "webpack --config webpack.config.js",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "jest-coverage": "yarn run jest -- --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -31,8 +33,9 @@
   "keywords": [
     "js"
   ],
-  "jest":{
-    "collectCoverage": true
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": ["./ui/**/*.{js,jsx}"]
   },
   "author": "Abraham Kamau",
   "license": "ISC",
