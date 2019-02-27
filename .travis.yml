@@ -1,0 +1,30 @@
+language: node_js
+
+node_js:
+  - '8'
+
+dist: trusty
+branches:
+  only:
+    - gh-pages
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - npm update
+
+install:
+  - npm install 
+  - npm i babel-polyfill
+  - npm i jest puppeteer faker --save-dev
+  - npm i babel-core babel-jest babel-preset-env --save-dev
+  - npm i babel-plugin-transform-regenerator
+  - npm install @babel/preset-env --save-dev
+  - npm install --save-dev babel-plugin-syntax-class-properties
+  - npm install --save-dev babel-plugin-transform-class-properties
+  - npm install coveralls --save-dev
+
+script:
+- npm test

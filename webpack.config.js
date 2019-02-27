@@ -15,7 +15,8 @@ module.exports={
        profile: "./ui/js/profile.js",
        question: "./ui/js/create_question.js",
        questions: "./ui/js/view_questions.js",
-       one_question: "./ui/js/one_question.js"
+       one_question: "./ui/js/one_question.js",
+       logout: "./ui/js/logout.js"
     },
     mode: 'development',
     output:{
