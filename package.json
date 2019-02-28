@@ -23,6 +23,7 @@
   "scripts": {
     "test": "jest --colors",
     "start": "webpack --config webpack.config.js",
+    "coverage": "jest --coverage",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "jest-coverage": "yarn run jest -- --coverage && cat ./coverage/lcov.info | coveralls"
   },

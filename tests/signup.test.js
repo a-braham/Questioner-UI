@@ -54,5 +54,6 @@ describe('Testing signup form', () => {
         await page.type("input[id=phone]", lead.phoneNumber);
         await page.click("input[id=password]");
         await page.type("input[id=password]", lead.password);
+        await page.click("input[type=submit]");
     }, 160000);
 })
