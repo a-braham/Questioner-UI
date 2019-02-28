@@ -1,7 +1,9 @@
 const path=require('path')
+// require("babel-polyfill");
 
 module.exports={
     entry:{
+    //    "babel-polyfill": "./ui/js",
        index: "./ui/js/index.js",
        signup: "./ui/js/signup.js",
        login: "./ui/js/login.js",
@@ -13,7 +15,8 @@ module.exports={
        profile: "./ui/js/profile.js",
        question: "./ui/js/create_question.js",
        questions: "./ui/js/view_questions.js",
-       one_question: "./ui/js/one_question.js"
+       one_question: "./ui/js/one_question.js",
+       logout: "./ui/js/logout.js"
     },
     mode: 'development',
     output:{

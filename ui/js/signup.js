@@ -37,3 +37,5 @@ function signUpUser(event) {
             }
         }))
 }
+
+export default signUpUser;
